@@ -1,3 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://dummy_user:dummy_user@social-network.avroo.mongodb.net/social-network?retryWrites=true&w=majority"
+  "mongoURI": "mongodb+srv://dummy_user:dummy_user@social-network.avroo.mongodb.net/social-network?retryWrites=true&w=majority",
+  "jwtSecret": "pez+pez=2"
 }
