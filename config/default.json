@@ -1,0 +1,3 @@
+{
+  "mongoURI": "mongodb+srv://dummy_user:dummy_user@social-network.avroo.mongodb.net/social-network?retryWrites=true&w=majority"
+}
