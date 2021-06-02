@@ -1,6 +1,6 @@
 const { check, validationResult } = require('express-validator');
 
-const signUpFieldsValidation = [
+const signUpFields = [
   check('name', 'Name is required').not().isEmpty(),
   check('email', 'Please include a valid email').isEmail(),
   check('phone', 'Please enter your phone number').not().isEmpty(),
@@ -10,4 +10,9 @@ const signUpFieldsValidation = [
   ).isLength({ min: 6 }),
 ];
 
-module.exports = { signUpFieldsValidation };
+const logInFields = [
+  check('email', 'Please include a valid email').isEmail(),
+  check('password', 'Password is required').exists(),
+];
+
+module.exports = { signUpFields, logInFields };

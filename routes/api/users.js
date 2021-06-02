@@ -7,7 +7,7 @@ const { check, validationResult } = require('express-validator');
 const User = require('../../models/User');
 const validations = require('../../validations/fields');
 
-router.post('/', validations.signUpFieldsValidation, async (req, res) => {
+router.post('/', validations.signUpFields, async (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return res.status(400).json({ errors: errors.array() });
