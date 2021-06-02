@@ -1,4 +1,6 @@
 {
   "mongoURI": "mongodb+srv://dummy_user:dummy_user@social-network.avroo.mongodb.net/social-network?retryWrites=true&w=majority",
-  "jwtSecret": "pez+pez=2"
+  "jwtSecret": "pez+pez=2",
+  "githubClientId": "c850d58bbcadcea284d0",
+  "githubSecret": "4d1355fd42ab19e9a49d22d4ac8224c6926471f3"
 }
