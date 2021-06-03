@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "b54aa5b7-063f-4a53-a44b-073dc8c5be7a",
+		"name": "Files",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all files",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjBiN2VjNGIzYWQ3OTEzMzljMjdkNjc2In0sImlhdCI6MTYyMjczNzM4NywiZXhwIjoxNjIzMDk3Mzg3fQ.cOp3liDssll65S7XODnS6bXk9pjcS10NGwbhDx0-IF0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/file",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"file"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a file",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjBiN2VjNGIzYWQ3OTEzMzljMjdkNjc2In0sImlhdCI6MTYyMjczNzM4NywiZXhwIjoxNjIzMDk3Mzg3fQ.cOp3liDssll65S7XODnS6bXk9pjcS10NGwbhDx0-IF0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/file",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"file"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get file by ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjBiN2VjNGIzYWQ3OTEzMzljMjdkNjc2In0sImlhdCI6MTYyMjczNzM4NywiZXhwIjoxNjIzMDk3Mzg3fQ.cOp3liDssll65S7XODnS6bXk9pjcS10NGwbhDx0-IF0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/file/60b913cefe32bf3814061904",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"file",
+						"60b913cefe32bf3814061904"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete file ",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjBiN2VjNGIzYWQ3OTEzMzljMjdkNjc2In0sImlhdCI6MTYyMjczNzM4NywiZXhwIjoxNjIzMDk3Mzg3fQ.cOp3liDssll65S7XODnS6bXk9pjcS10NGwbhDx0-IF0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/file/60b913cefe32bf3814061904",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"file",
+						"60b913cefe32bf3814061904"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

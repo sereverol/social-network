@@ -1,0 +1,242 @@
+{
+	"info": {
+		"_postman_id": "0b2eac1f-a7d6-49fd-b97a-64d7c7fe7497",
+		"name": "Posts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA0OTM5YTM5ZWZjNjEwM2NjYTY4NDViIn0sImlhdCI6MTYxNTUwMDUzMiwiZXhwIjoxNjE1ODYwNTMyfQ.X002lFbnuxJaIkdO_J3JhPc6BblIigmGSbChKATfLfI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet mi vel ante tempus convallis eget placerat sapien. Maecenas consectetur elit lacus, sit amet imperdiet diam porta at. Vivamus et elit luctus, dapibus diam id, pulvinar est. Donec elit dui, aliquet sed feugiat ut, fermentum sed dui. Aenean consectetur eget nibh a dictum. Vestibulum quis lectus commodo, mattis purus ut, vestibulum massa.\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all posts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA0OTQzZjk0YjA4NzkzY2I4OTQwYWQ0In0sImlhdCI6MTYxNTUwMDc5MywiZXhwIjoxNjE1ODYwNzkzfQ.Fb24A5aM7cxNEgkXr5xlKff_AiX6GEonVP8c4pI5_f4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\": \"This is a new post from the user John Doe\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Post by ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA0OTQzZjk0YjA4NzkzY2I4OTQwYWQ0In0sImlhdCI6MTYxNTUwMDc5MywiZXhwIjoxNjE1ODYwNzkzfQ.Fb24A5aM7cxNEgkXr5xlKff_AiX6GEonVP8c4pI5_f4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\": \"This is a new post from the user John Doe\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/posts/604a95c957a60a43b8c74043",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"posts",
+						"604a95c957a60a43b8c74043"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Post",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA0OTM5YTM5ZWZjNjEwM2NjYTY4NDViIn0sImlhdCI6MTYxNTUwMjI1NiwiZXhwIjoxNjE1ODYyMjU2fQ.7ZhmqqcPqv9iRjeyqgREjzCVbcmnTNC63kddF1J1-q4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/posts/604a9c0f0823f23f8890de59",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"posts",
+						"604a9c0f0823f23f8890de59"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete comment",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA0OTQzZjk0YjA4NzkzY2I4OTQwYWQ0In0sImlhdCI6MTYxNTczOTc5MiwiZXhwIjoxNjE2MDk5NzkyfQ._Jir-4BcTlJ3_Ai0B9fCdX-lBhpkRxFjcmFk8AxZiAk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/posts/comment/604a958f83eab3319003f282/604e43b6106efd06449ca19d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"posts",
+						"comment",
+						"604a958f83eab3319003f282",
+						"604e43b6106efd06449ca19d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Comment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA0OTQzZjk0YjA4NzkzY2I4OTQwYWQ0In0sImlhdCI6MTYxNTczOTc5MiwiZXhwIjoxNjE2MDk5NzkyfQ._Jir-4BcTlJ3_Ai0B9fCdX-lBhpkRxFjcmFk8AxZiAk",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\": \"DELETE ME\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/posts/comment/604a958f83eab3319003f282",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"posts",
+						"comment",
+						"604a958f83eab3319003f282"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Like and unlike",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA0OTQzZjk0YjA4NzkzY2I4OTQwYWQ0In0sImlhdCI6MTYxNTczOTc5MiwiZXhwIjoxNjE2MDk5NzkyfQ._Jir-4BcTlJ3_Ai0B9fCdX-lBhpkRxFjcmFk8AxZiAk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/posts/likes/604a958f83eab3319003f282",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"posts",
+						"likes",
+						"604a958f83eab3319003f282"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

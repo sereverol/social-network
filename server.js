@@ -14,6 +14,7 @@ app.use(express.json({ extended: false }));
 app.use(cors());
 
 app.get('/', (req, res) => res.send('API Running'));
+app.use('/uploads', express.static('uploads'));
 app.use('/api/users', apiUsers);
 app.use('/api/auth', apiAuth);
 app.use('/api/profile', apiProfile);

@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "7e750334-4804-4578-9678-f7a9c69e81a2",
+		"name": "Profiles",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create & Update Profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA0OTM5YTM5ZWZjNjEwM2NjYTY4NDViIn0sImlhdCI6MTYxNTQ4MDI3MCwiZXhwIjoxNjE1ODQwMjcwfQ.tUTW65mPsgX2AkyUowQj6hh1aB3IddczMylaNr1q1Vk",
+						"description": "token",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"company\": \"SERPCA\",\r\n    \"status\": \"Junior Developer\",\r\n    \"website\": \"https://www.serpca.com.ve\",\r\n    \"skills\": \"HTML, CSS, JS, React \",\r\n    \"location\": \"Miami, FL\",\r\n    \"bio\": \"I am a student and 21 yo haha\",\r\n    \"githubusername\": \"silfridoreverol\",\r\n    \"twitter\": \"https://twitter.com/silfridoreverol\",\r\n    \"facebook\": \"https://facebook.com/silfridoreverol\",\r\n    \"youtube\": \"https://youtube.com/silfridoreverol\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get logged in users profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA0OTM5YTM5ZWZjNjEwM2NjYTY4NDViIn0sImlhdCI6MTYxNTQxNDE4NSwiZXhwIjoxNjE1Nzc0MTg1fQ.2nfplF6s4SDggqvAq5h3jtkUf5s3N1YoOLYhAoYMKNI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/profile/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"profile",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all profiles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete profile and user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA0YTUxOTQzYjg2NjcwOWRjZjQwODVjIn0sImlhdCI6MTYxNTQ4MzI4NCwiZXhwIjoxNjE1ODQzMjg0fQ.PWuqe0NEHW6DX_vmFKBoPVbnlYHdOqP4wdhhUa27o2o",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get profile by user ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/profile/user/604939a39efc6103cca6845b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"profile",
+						"user",
+						"604939a39efc6103cca6845b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add experience ",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": "JSON Content",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA0OTM5YTM5ZWZjNjEwM2NjYTY4NDViIn0sImlhdCI6MTYxNTQ4MDI3MCwiZXhwIjoxNjE1ODQwMjcwfQ.tUTW65mPsgX2AkyUowQj6hh1aB3IddczMylaNr1q1Vk",
+						"description": "token",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Developer\",\r\n    \"company\": \"SERPCA\",\r\n    \"location\": \"Miami, FL\",\r\n    \"from\": \"8-10-2010\",\r\n    \"current\": true,\r\n    \"description\": \"UI developer\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/profile/experience",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"profile",
+						"experience"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add education",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": "JSON Content",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA0OTM5YTM5ZWZjNjEwM2NjYTY4NDViIn0sImlhdCI6MTYxNTQ5NjY4MywiZXhwIjoxNjE1ODU2NjgzfQ.QKbhgD3YWOX7MX_U_E6xBzhiJvc5H4VbZ07v81ke8cU",
+						"description": "token",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"school\": \"Universidad Rafael Urdaneta\",\r\n    \"degree\": \"Ingenieria en computacion\",\r\n    \"fieldofstudy\": \"Computer Science\",\r\n    \"from\": \"1-17-2017\",\r\n    \"to\": \"7-20-2021\",\r\n    \"description\": \"Doing my thesis\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/profile/education",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"profile",
+						"education"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete experience",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA0OTM5YTM5ZWZjNjEwM2NjYTY4NDViIn0sImlhdCI6MTYxNTQ4MDI3MCwiZXhwIjoxNjE1ODQwMjcwfQ.tUTW65mPsgX2AkyUowQj6hh1aB3IddczMylaNr1q1Vk",
+						"description": "token",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/profile/experience/604a7e192c4cbc3a70440834",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"profile",
+						"experience",
+						"604a7e192c4cbc3a70440834"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete education",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjA0OTM5YTM5ZWZjNjEwM2NjYTY4NDViIn0sImlhdCI6MTYxNTQ4MDI3MCwiZXhwIjoxNjE1ODQwMjcwfQ.tUTW65mPsgX2AkyUowQj6hh1aB3IddczMylaNr1q1Vk",
+						"description": "token",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/profile/education/604a88aebedcec05b4414b8f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"profile",
+						"education",
+						"604a88aebedcec05b4414b8f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Github Repos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/profile/github/silfridoreverol",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"profile",
+						"github",
+						"silfridoreverol"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
