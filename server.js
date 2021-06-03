@@ -6,6 +6,7 @@ const apiUsers = require('./routes/api/users');
 const apiAuth = require('./routes/api/auth');
 const apiProfile = require('./routes/api/profile');
 const apiPosts = require('./routes/api/posts');
+const apiFile = require('./routes/api/file');
 
 connectDB();
 
@@ -17,6 +18,7 @@ app.use('/api/users', apiUsers);
 app.use('/api/auth', apiAuth);
 app.use('/api/profile', apiProfile);
 app.use('/api/posts', apiPosts);
+app.use('/api/file', apiFile);
 
 const PORT = process.env.PORT || 3000;
 
