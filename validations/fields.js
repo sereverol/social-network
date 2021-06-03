@@ -33,10 +33,13 @@ const addEducationFields = [
   check('from', 'From date is required').not().isEmpty(),
 ];
 
+const checkForText = [check('text', 'Text is required').not().isEmpty()];
+
 module.exports = {
   signUpFields,
   logInFields,
   createOrUpdateProfileFields,
   addExperienceFields,
   addEducationFields,
+  checkForText,
 };
