@@ -72,6 +72,7 @@ router.delete('/:id', auth, async (req, res) => {
   try {
     const file = await File.findById(req.params.id);
     const filePath = file.filePath;
+    const fileName = file.fileName;
     if (!file) {
       return res.status(404).json({ msg: 'File not found' });
     }
@@ -82,7 +83,7 @@ router.delete('/:id', auth, async (req, res) => {
 
     fs.unlink(file.filePath, (err) => {
       if (err) throw err;
-      console.log(`${filePath} has been removed succesfully!`);
+      console.log(`${fileName} has been removed succesfully!`);
     });
 
     await file.remove();
