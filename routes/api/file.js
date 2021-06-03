@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const fs = require('fs');
 const multer = require('multer');
 const auth = require('../../middleware/auth');
 const User = require('../../models/User');
@@ -70,7 +71,7 @@ router.get('/:id', auth, async (req, res) => {
 router.delete('/:id', auth, async (req, res) => {
   try {
     const file = await File.findById(req.params.id);
-
+    const filePath = file.filePath;
     if (!file) {
       return res.status(404).json({ msg: 'File not found' });
     }
@@ -79,10 +80,13 @@ router.delete('/:id', auth, async (req, res) => {
       return res.status(401).json({ msg: 'User not authorized' });
     }
 
+    fs.unlink(file.filePath, (err) => {
+      if (err) throw err;
+      console.log(`${filePath} has been removed succesfully!`);
+    });
+
     await file.remove();
     res.json({ msg: 'File removed' });
-
-    res.json(files);
   } catch (err) {
     console.error(err.message);
     if (err.kind == 'ObjectId') {
